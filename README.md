@@ -37,4 +37,4 @@ Welcome to the **WISHBONE SoC Counter** project! This project demonstrates the u
 - **constraints.xdc**: Pin and timing constraints for Vivado-based FPGA programming.
 
 ## License
-This project is licensed under the MIT License.
+This project Open source.
