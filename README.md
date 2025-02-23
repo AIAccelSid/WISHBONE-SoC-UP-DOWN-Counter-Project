@@ -1,5 +1,5 @@
 # WISHBONE-SoC-UP-DOWN-Counter-Project
-# WISHBONE SoC Counter Project
+# WISHBONE SoC up down Counter Project
 
 Welcome to the **WISHBONE SoC Counter** project! This project demonstrates the use of the **WISHBONE** interface in FPGA design, utilizing **Xilinx Vivado** to create a **System-on-Chip (SoC)** design. The project integrates:
 
