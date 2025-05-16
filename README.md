@@ -81,3 +81,102 @@ The project includes:
 | (Host CPU) |        | (with control |       |                  |
 +------------+        |  + status reg)|       +-----------------+
                       +---------------+
+
+📌 Key Design Points
+✅ Master initiates WISHBONE transactions (read/write operations).
+
+✅ Slave decodes address, controls the counter and handles data transactions.
+
+✅ Counter updates synchronously with the system clock ensuring deterministic operation.
+
+✅ Status and counter value accessible via WISHBONE read access
+
+WISHBONE-SoC-UP-DOWN-Counter-Project/
+│
+├── src/
+│   ├── counter.v               # 32-bit up-down counter module
+│   ├── wishbone_slave.v        # WISHBONE-compliant slave interface
+│   ├── wishbone_master.v       # WISHBONE master test/demo module
+│   └── top_module.v            # Top-level SoC integration module
+│
+└── README.md                   # Project documentation (this file)
+
+🚀 Getting Started
+1️⃣ Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/AIAccelSid/WISHBONE-SoC-UP-DOWN-Counter-Project.git
+cd WISHBONE-SoC-UP-DOWN-Counter-Project
+2️⃣ Open in Vivado
+Launch Xilinx Vivado.
+
+Create a new RTL project (no board selected initially).
+
+Add Verilog source files from src/.
+
+Add constraints file from constraints/constraints.xdc.
+
+Edit pin assignments to match your FPGA board.
+
+3️⃣ Run Synthesis & Implementation
+Run Synthesis.
+
+Run Implementation.
+
+Generate the Bitstream file.
+
+4️⃣ Program the FPGA
+Connect your FPGA development board.
+
+Open Vivado’s Hardware Manager.
+
+Program the device with the generated .bit file.
+
+5️⃣ Observe Operation
+Connect to the FPGA’s LEDs, serial console, or other peripherals.
+
+Observe the counter’s behavior based on your constraints and control inputs.
+
+✏️ How to Modify
+Change Counter Width:
+Modify the parameter inside counter.v to adjust bit-width.
+
+Add New WISHBONE Registers:
+Update the address mapping and logic in wishbone_slave.v.
+
+Integrate with a Soft RISC-V CPU:
+Connect the WISHBONE master signals to your RISC-V core’s memory bus interface.
+
+🧠 Learnings & Concepts Covered
+📖 WISHBONE protocol structure and interfacing.
+
+📖 Master/Slave communication handshake techniques (ACK, STB, WE).
+
+📖 Address decoding, register-mapped peripherals.
+
+📖 SoC-level integration techniques in FPGA designs.
+
+📖 Xilinx Vivado implementation flow: Synthesis → Implementation → Bitstream.
+
+📖 Custom IP development and FPGA constraints management.
+
+📑 References
+📘 WISHBONE Specification vB4 (PDF)
+
+📘 Xilinx Vivado Design Suite Documentation
+
+📘 RISC-V and SoC Bus Interfacing Concepts
+
+📜 License
+This project is released under the MIT License.
+Feel free to use, fork, modify, and distribute it. Contributions are highly welcome!
+
+🙌 About the Author
+Made with 💻⚙️ and a little bit of ☕ by Siddharth Singh Upadhyay
+👨‍💻 AI & FPGA Hardware Engineer | ASIC & SoC Enthusiast | RISC-V Fanboy
+
+GitHub: AIAccelSid
+
+🚀 Build it. Tweak it. Break it. Learn it.
+
